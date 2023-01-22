@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+	<h2>JavaScript JSON, </h2>	
+	<p>JSON, (Java Script Object Notation) is a format to send data to server and data to client. </p>
+	<p id="demo"></p>
+
+	<script>
+	//JSON Format
+	//var variable_name={"key":"value"};	
+	//Json in a file
+	/*{
+		"book" : [	{id:"a1", name : "JavaScript Json", edition : "Forth", author : "Nick Morgan"},
+					{id:"a2",name : "C++",edition:"Sixth", author:"Richarson"}
+				]
+	}*/
+	//JSON.Stringify()
+	//After converting an object to a format of JSON then only we can send the data to server,
+	//to convert the data into JSON we use JSON.stringify() method and in the stringify method we 
+	//specify the object which needs to be passed.
+	let stringifyPerson={
+				name:"Kevin",
+				age:23,
+				address:{Flat_No:"34",
+						Street:"Kureeppally",
+						City:"Kollam"
+						},
+				interests:["Reading","Biking","Adventure"]
+				};	
+	let p=JSON.stringify(stringifyPerson);
+	console.log(p);
+	
+	//JSON.parse()
+	/*the server data which is received in from the server needs to be converted back to object format 
+	for the program or us to understand. The method to do so is through parse() method*/
+	
+	let parsedPerson=JSON.parse(`{"name":"Kevin","age":"23",
+	"address":{"Flat_No":"34","Street":"Kureeppally","City":"Kollam"},
+							"interests":["Reading","Biking","Adventure"]}`);
+		document.getElementById('demo').innerHTML=parsedPerson.name;
+		console.log(parsedPerson.age);
+		console.log(parsedPerson.address.Flat_No);
+		console.log(parsedPerson.address.Street);
+		console.log(parsedPerson.address.City);
+		console.log(parsedPerson.interests[0]);
+		console.log(parsedPerson.interests[1]);
+	
+		
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+	<body>
+	<p>Error Handling</p>
+	<p id='errmsg'></p>
+	Enter number greater than 3 and less than 20
+	<input type="text" id="txtInput">
+	<button type="button" onclick="submit()">Test Data</button> 
+	
+	<script>	
+		
+		function submit(){
+		var val=document.getElementById("txtInput").value;
+		try{
+			if(val=="") throw "Field can't be empty"
+			if(isNaN(val)) throw "Enter a valid number"
+			var x=Number(val);
+			if(x<3) throw "the number is less than 3"
+			if(x>20) throw "the numbre si greater then 20"
+		}
+		catch(err){
+			document.getElementById('errmsg').innerHTML=err;
+		}
+		finally{
+			document.getElementById("txtInput").value="";
+		}
+		}
+	
+	</script>
+	</body>
+</html>

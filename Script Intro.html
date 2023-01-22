@@ -1,0 +1,56 @@
+<html>
+<head>
+	<!-- <script type="text/javascript"> -->
+		<!-- function disp() -->
+		<!-- { -->
+			<!-- alert("Hello JS World By script"); -->
+		<!-- } -->
+	<!-- </script> -->
+</head>
+<body>
+	<div>
+		<h2>JS</h2>
+		<p id="dynamictxt"></p>
+		<p id="txt"></p>
+		<p>Outside chkTypOf() language is undefined</p>
+	</div>
+
+	<script language="javascript" type="text/javascript">
+		chkTypOf();
+		
+		function chkTypOf(){
+			var language = 12345;
+			document.getElementById('dynamictxt').innerHTML=(typeof language +" "+ language);
+		}
+		document.getElementById('txt').innerHTML=typeof language;
+	
+		var a=['Apple','Orange','Graphs',23];
+		console.log(a[2]);
+		a[3]='Mango';
+		console.log(a);
+		debugger;
+		
+		function sayHello(x){
+			console.log("Say Hello to "+x);
+		}
+		function add(x,y){
+			console.log(x+y);
+		}
+		function ret_un(a,b){
+			return(a+b);
+		}		
+			
+		sayHello('Reshma');
+		sayHello('Kevin');
+		add(10,4);
+		add(23,36);
+		console.log(ret_un(12,45));
+		console.log(ret_un(12,78));
+				
+	</script> 	
+	
+	<noscript>
+	Sorry, your browser doesn't support JS!
+	</noscript>
+</body>
+</html>

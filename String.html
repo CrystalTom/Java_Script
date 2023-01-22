@@ -1,0 +1,31 @@
+<html>
+	<body>
+	
+	<p id="demo"></p>
+	<p id="demo_1"></p>
+	Object Comparision<p id="demo_2"></p>
+	
+	<script>
+		var y = `This is a string with a 'single quote'`;
+		var z = `This is a string with a "double quote"`;
+		document.getElementById("demo").innerHTML = y;
+		document.getElementById("demo_1").innerHTML = z;
+					
+		let a=5,b=10;
+		console.log(`Sum of ${a} and ${b} is ${a+b}`);
+		
+		var c="Javascript";
+		var d=new String("Javascript");
+		document.getElementById('demo').innerHTML= typeof(c)+ " " +typeof(d);
+		document.getElementById('demo').innerHTML= (c==d);
+		document.getElementById('demo').innerHTML= (c===d);
+		
+		//we can't compare two object variables.
+		var e ={name:"A"};
+		var f ={name:"B"};
+		document.getElementById('demo_2').innerHTML= (e===f);
+		
+		
+	</script>
+	</body>
+</html>

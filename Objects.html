@@ -1,0 +1,50 @@
+<html>
+	<head></head>
+	<body>
+	<script>
+		let peoples={
+		name:'A', 
+		age:20		
+		};
+		
+		let student={
+		name:"Thomas",
+		age:"15",
+		marks:{
+			maths:90,
+			science:98
+			},
+			sayHello:function(){
+				let num="34";
+				console.log(typeof(parseInt(num)),num);
+				console.log("Hello Hrithik");				
+			}
+		}		
+		console.log(typeof peoples);
+		console.log(peoples.name,peoples.age);
+		console.log(peoples["name"],peoples["age"]);
+		
+		//nested objects
+		console.log(student.name,student.age,student.marks.maths);
+		console.log(student.name,student.age,student.marks.science);
+		console.log(student.name,student.age);
+		//nested function in object
+		student.sayHello();
+		//Assigning properties to a null object
+		let abc={};
+		abc.name="ThomasAbc";
+		abc.hello=function (){console.log(this.name)};
+		abc.hello();
+		//this keyword is used to get the properties within the object
+		let thisabc={
+		name:'Kevin',
+		age:24,
+		getInfo:function(){
+		console.log('Hello '+this.name+' you are age is : '+this.age);
+		}};
+		thisabc.getInfo();
+
+	</script>
+	
+	</body>
+</html>
